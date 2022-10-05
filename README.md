@@ -4,21 +4,30 @@ Microservicio para tabla Empleado:
 
 Capacidad CRUD para departamento y empleado
 
+## ALERTA:
+
+Es necesario tener Docker instalado para poder ejecutar el proyecto con el comando:
 
 
-Rutas Departamento:
+`docker-compose up`
 
-CREAR DEPARTAMENTO (POST)
--http://localhost:1234/department/create
+
+
+## Rutas Departamento:
+
+### CREAR DEPARTAMENTO (POST)
+`http://localhost:1234/department/create`
+
     Body:
-    {
+ {
 "code":12346,
 "name":"Finanzas",
 "budget":500000
 }
 
-EDITAR DEPARTAMENTO (PUT)
--http://localhost:1234/department/edit
+### EDITAR DEPARTAMENTO (PUT)
+`http://localhost:1234/department/edit`
+
     Body:
     {
 "code":12346,
@@ -26,26 +35,27 @@ EDITAR DEPARTAMENTO (PUT)
 "budget":420000
 }
 
-ELIMINAR DEPARTAMENTO (DELETE)
--http://localhost:1234/department/delete
+### ELIMINAR DEPARTAMENTO (DELETE)
+`http://localhost:1234/department/delete`
+
     Body:
     {
 "code":"12346"
 }
 
-CONSULTAR DEPARTAMENTOS (GET)
--http://localhost:1234/department/
+### CONSULTAR DEPARTAMENTOS (GET)
+`http://localhost:1234/department/`
 
 CONSULTAR UN SOLO DEPARTAMENTO (GET)
--http://localhost:1234/department/12346
+`http://localhost:1234/department/12346`
     toma code  a traves de params
 
 
 
-Rutas Empleado:
+## Rutas Empleado:
 
-CREAR EMPLEADO (POST)
--http://localhost:1234/employee/create
+### CREAR EMPLEADO (POST)
+`http://localhost:1234/employee/create`
     Body:
     {
 "id":44477,
@@ -56,8 +66,8 @@ CREAR EMPLEADO (POST)
 "code": 12346
 }
 
-EDITAR EMPLEADO (PUT) ===> Se debe crear otro departamento primero con code "1235"
--http://localhost:1234/employee/edit
+### EDITAR EMPLEADO (PUT) ===> Se debe crear otro departamento primero con code "1235"
+`http://localhost:1234/employee/edit`
     Body:
     {
 "id":44477,
@@ -68,16 +78,16 @@ EDITAR EMPLEADO (PUT) ===> Se debe crear otro departamento primero con code "123
 "code": 1235
 }
 
-ELIMINAR EMPLEADO (DELETE)
--http://localhost:1234/employee/delete
+### ELIMINAR EMPLEADO (DELETE)
+`http://localhost:1234/employee/delete`
     Body:
     {
 "id":"44477"
 }
 
-CONSULTAR EMPLEADOS (GET)
--http://localhost:1234/employee/
+### CONSULTAR EMPLEADOS (GET)
+`http://localhost:1234/employee/`
 
-CONSULTAR UN SOLO EMPLEADO (GET)
--http://localhost:1234/employee/44477
+### CONSULTAR UN SOLO EMPLEADO (GET)
+`http://localhost:1234/employee/44477`
     toma id a traves de params

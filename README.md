@@ -18,8 +18,8 @@ Es necesario tener Docker instalado para poder ejecutar el proyecto con el coman
 ### CREAR DEPARTAMENTO (POST)
 `http://localhost:1234/department/create`
 
-    Body:
- {
+Body:
+{
 "code":12346,
 "name":"Finanzas",
 "budget":500000
@@ -28,8 +28,8 @@ Es necesario tener Docker instalado para poder ejecutar el proyecto con el coman
 ### EDITAR DEPARTAMENTO (PUT)
 `http://localhost:1234/department/edit`
 
-    Body:
-    {
+Body:
+{
 "code":12346,
 "name":"Finanzas y Contabilidad",
 "budget":420000
@@ -38,8 +38,8 @@ Es necesario tener Docker instalado para poder ejecutar el proyecto con el coman
 ### ELIMINAR DEPARTAMENTO (DELETE)
 `http://localhost:1234/department/delete`
 
-    Body:
-    {
+Body:
+{
 "code":"12346"
 }
 
@@ -48,7 +48,8 @@ Es necesario tener Docker instalado para poder ejecutar el proyecto con el coman
 
 CONSULTAR UN SOLO DEPARTAMENTO (GET)
 `http://localhost:1234/department/12346`
-    toma code  a traves de params
+
+toma code  a traves de params
 
 
 
@@ -56,8 +57,9 @@ CONSULTAR UN SOLO DEPARTAMENTO (GET)
 
 ### CREAR EMPLEADO (POST)
 `http://localhost:1234/employee/create`
-    Body:
-    {
+
+Body:
+{
 "id":44477,
 "nif": "polea",
 "name": "Andres",
@@ -68,8 +70,9 @@ CONSULTAR UN SOLO DEPARTAMENTO (GET)
 
 ### EDITAR EMPLEADO (PUT) ===> Se debe crear otro departamento primero con code "1235"
 `http://localhost:1234/employee/edit`
-    Body:
-    {
+
+Body:
+{
 "id":44477,
 "nif": "polea",
 "name": "Andres",
@@ -80,8 +83,8 @@ CONSULTAR UN SOLO DEPARTAMENTO (GET)
 
 ### ELIMINAR EMPLEADO (DELETE)
 `http://localhost:1234/employee/delete`
-    Body:
-    {
+Body:
+{
 "id":"44477"
 }
 
@@ -90,4 +93,5 @@ CONSULTAR UN SOLO DEPARTAMENTO (GET)
 
 ### CONSULTAR UN SOLO EMPLEADO (GET)
 `http://localhost:1234/employee/44477`
-    toma id a traves de params
+
+toma id a traves de params

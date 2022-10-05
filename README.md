@@ -6,9 +6,16 @@ Capacidad CRUD para departamento y empleado
 
 ## ALERTA:
 
-Es necesario tener Docker instalado para poder ejecutar el proyecto con el comando:
+Es necesario tener Docker instalado para poder ejecutar el proyecto siguiendo estos pasos:
 
 
+1. Crear un archivo .env con las siguientes variables:
+DB_USER=postgres
+DB_PASS=postgres
+DB_HOST=database
+DB_NAME=cobrandotest
+
+2. Ejecutar el comando:
 `docker-compose up`
 
 

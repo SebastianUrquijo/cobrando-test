@@ -4,7 +4,9 @@ services:
   server:
     container_name: cobrando-test
     restart: always
-    build: .
+    build: 
+      context: .
+
     depends_on:
       - database
     ports:
@@ -21,7 +23,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - DATABASE_HOST = 127.0.0.1
-      - POSTGRES_USER = root
-      - POSTGRES_PASSWORD = root
-      - POSTGRES_DB= root
+      ##DATABASE_HOST : postgres
+      ##POSTGRES_USER : postgres
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
